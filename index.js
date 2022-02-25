@@ -1,8 +1,8 @@
 const fs = require('fs')
 
-const content = Date.now()
+const content = Date.now().toString()+'\n'
 
-fs.writeFile('test.txt', content, err => {
+fs.appendFile('test.txt', content, err => {
   if (err) {
     console.error(err)
     return
